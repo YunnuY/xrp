@@ -20,4 +20,8 @@ var app = new EmberApp();
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 
+if (app.env === 'development') {
+  app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', {destDir: 'assets'});
+}
+
 module.exports = app.toTree();
